@@ -20,7 +20,7 @@ button{
 
 button:active{
 	border-top: 1.5px solid gray;
-	border-bottom: none;
+	border-bottom: 1.5px solid #DCDCDC;
 }
 
 input{
@@ -41,8 +41,9 @@ input{
 		font: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	}
 	body{
-		width: 90%;
+		width: 80%;
 		margin: 10px auto;
+		padding: 0px 20px;
 	}
 	input{
 		margin: 5px 0px;
