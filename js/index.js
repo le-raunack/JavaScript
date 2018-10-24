@@ -34,20 +34,44 @@ function oct2dec(){
 }
 
 function hex2dec(){
+	debugger;
 	var hex=document.getElementById("hexadec").value;
-	var dec=0, rem=0, dic=0, count=0;
-	while(hex>0){
-		rem=hex%10;
-		if(rem==='A'||rem==='a'){ rem=10; }
-		else if(rem==='B'||rem==='b'){ rem=11; }
-		else if(rem==='C'||rem==='c'){ rem=12; }
-		else if(rem==='D'||rem==='d'){ rem=13; }
-		else if(rem==='E'||rem==='e'){ rem=14; }
-		else if(rem==='F'||rem==='f'){ rem=15; }
-		dic=rem*Math.pow(16,count);
-		dec=dec+dic;
-		count++;
-		hex=Math.floor(hex/10);
+	var dec=0; 
+	var rem=0; 
+	var dic=0; 
+	var count=0; 
+	var temp=0;
+	var sum=0;
+	var i=hex.length-1;
+	while(i>=0){
+		switch(hex.charAt(i)){
+			case "A": 
+				temp=10; 
+				break;
+			case "B": 
+				temp=11; 
+				break;
+			case "C": 
+				temp=12; 
+				break;
+			case "D": 
+				temp=13; 
+				break;
+			case "E": 
+				temp=14; 
+				break;
+			case "F": 
+				temp=15; 
+				break;
+			default: 
+                temp=parseInt(hex.charAt(i)) ; 
+                break;
+		}
+		temp=temp*Math.pow(16, count);
+		sum=sum+temp;
+		count=count+1;
+		i--;
 	}
-	document.getElementById("decim").value=dec;
+	
+	document.getElementById("decim").value=sum;
 }

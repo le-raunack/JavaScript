@@ -1,15 +1,25 @@
 @charset "utf-8";
 *{
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+html{
+	padding: 0px;
+	margin: 0px;
 }
 
 body{
-	width: 50%;
-	margin: 10px auto;
-	padding: 0px 20px;
-	box-shadow: 1px 1px 10px 1px gray;
-	height: 500px;
-	border-radius: 20px;
+	display: flex;
+	width: 100%;
+	margin: 0px;
+	padding:0px;
+	justify-content: center;
+	align-items: center;
+}
+
+main{
+	display: inline-block;
 }
 
 button{
