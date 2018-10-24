@@ -13,3 +13,9 @@ body{
 	border-bottom: 1px solid;
 	outline: none;
 }
+
+@media (max-width: 320px){
+	input{
+		margin: 5px 0px;
+	}
+}

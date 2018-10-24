@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JS</title>
-
 <link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -11,13 +11,24 @@
 	<h1>Conversions</h1>
 	<p>Binary to Decimal</p>
 	<input type="number" id="binary" placeholder="Binary" >
-	<button type="button" onclick="bin2dec()" id="butt">Convert</button>
+	<button type="button" onclick="bin2dec()" class="butt">Convert</button>
 	<input type="number" id="decimal" placeholder="Decimal">
 	<hr>
-	<h2>Leave a Comment!</h2>
+	<!--<h2>Leave a Comment!</h2>
 	<input type="text" id="comment" placeholder="Comment">
 	<button onclick="Comment()">Update</button>
 	<p id="show" ><i>No comments.</i></p>
+	<hr>-->
+	<p>Octal to Decimal</p>
+	<input type="number" id="octal" placeholder="Octal" >
+	<button type="button" onclick="oct2dec()" class="butt">Convert</button>
+	<input type="number" id="decima" placeholder="Decimal">
+	<hr>
+	<p>Hexadecimal to Decimal</p>
+	<input id="hexadec" placeholder="Hexadecimal" >
+	<button type="button" onclick="hex2dec()" class="butt">Convert</button>
+	<input type="number" id="decim" placeholder="Decimal">
+	<hr>
 	<script src="js/index.js"></script>
 </body>
 </html>
