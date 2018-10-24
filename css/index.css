@@ -14,7 +14,7 @@ body{
 	outline: none;
 }
 
-@media (max-width: 320px){
+@media (max-width: 320px) and (max-width: 720px){
 	input{
 		margin: 5px 0px;
 	}
