@@ -5,19 +5,44 @@
 
 body{
 	width: 50%;
-	margin: 0px auto;
+	margin: 10px auto;
+	padding: 0px 20px;
+	box-shadow: 1px 1px 10px 1px gray;
+	height: 500px;
+	border-radius: 20px;
 }
 
-#comment{
-	border: none;
-	border-bottom: 1px solid;
+button{
+	border-radius: 20px;
+	border-bottom: 1.5px solid gray;
 	outline: none;
 }
 
+button:active{
+	border-top: 1.5px solid gray;
+	border-bottom: none;
+}
+
+input{
+	outline: none;
+	border: none;
+	background: white;
+	border-bottom: 1px gray solid;
+}
+
+/*#comment{
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+}*/
+
 @media (max-width: 320px) and (max-width: 720px){
+	*{
+		font: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	}
 	body{
 		width: 80%;
-		margin: 0px auto;
+		margin: 10px auto;
 	}
 	input{
 		margin: 5px 0px;
