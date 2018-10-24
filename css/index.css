@@ -4,7 +4,7 @@
 }
 
 body{
-	width: 80%;
+	width: 50%;
 	margin: 0px auto;
 }
 
@@ -15,6 +15,10 @@ body{
 }
 
 @media (max-width: 320px) and (max-width: 720px){
+	body{
+		width: 80%;
+		margin: 0px auto;
+	}
 	input{
 		margin: 5px 0px;
 	}
