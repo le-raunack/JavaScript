@@ -1,3 +1,6 @@
+var time= new Date();
+document.getElementById("date").innerHTML= "Date: " + time.getDate() + "/" + (time.getMonth()+1) + "/" + time.getFullYear();
+
 function bin2dec(){
 	var bin=document.getElementById("binary").value;
 	var dec=0, rem=0, dic=0, count=0;
