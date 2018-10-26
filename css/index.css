@@ -10,25 +10,21 @@ html{
 
 body{
 	display: flex;
-	width: 50%;
+	width: 40%;
 	margin: 10px auto;
 	padding:0px 10px 20px;
 	justify-content: center;
-	align-items: center;
+	/*align-items: center;*/
 	box-shadow: 0px 2px 5px 0px gray;
 }
 
-main{
-	display: inline-block;
-}
-
-button{
+.butt{
 	border-radius: 20px;
 	border-bottom: 1.5px solid gray;
 	outline: none;
 }
 
-button:active{
+.butt:active{
 	border-bottom: 1.5px solid #DCDCDC;
 }
 
@@ -39,13 +35,39 @@ input{
 	border-bottom: 1px gray solid;
 }
 
-/*#comment{
-	border: none;
-	border-bottom: 1px solid;
-	outline: none;
-}*/
+#calculator{
+	width: 100%;
+	border: 1px solid lightgray;
+	padding: 10px;
+	justify-content: center;
+	text-align: center;
+}
 
-@media (min-width: 320px) and (max-width: 720px)/* and (max-width: 1280px) and (max-width: 420px)*/{
+#calculator input{
+	width: 100%;
+	padding: 10px 15px;
+	font-size: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 1px 5px 0px gray;
+}
+
+#calculator ul{
+	padding: 0px;
+}
+
+#calculator ul li{
+	display: inline-block;
+	width: 20%;
+	box-shadow: 0px 1px 5px 0px gray;
+	margin: 2px 4px;
+	padding: 5px 0px;
+}
+
+#calculator ul li:active{
+	box-shadow: 0px 1px 1px 0px gray;
+}
+
+@media (min-width: 320px) and (max-width: 720px){
 	*{
 		font: sans-serif;
 	}
