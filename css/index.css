@@ -44,7 +44,7 @@ input{
 }
 
 #octal:focus{
-	border-bottom: 1.5px lightgreen solid;
+	border-bottom: 1.5px green solid;
 }
 
 #hexadec:focus{
