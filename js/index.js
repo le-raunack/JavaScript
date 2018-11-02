@@ -1,7 +1,8 @@
+
 "use strict";
 let time = new Date();
 document.getElementById("date").innerHTML =
-  "Date: " +
+  "<strong>Date</strong>: " +
   time.getDate() +
   "/" +
   (time.getMonth() + 1) +
@@ -10,6 +11,9 @@ document.getElementById("date").innerHTML =
 
 function bin2dec() {
   let bin = document.getElementById("binary").value;
+  if(bin==""){
+    alert("*Binary number required!");
+  }
   let dec = 0,
     rem = 0,
     dic = 0,
@@ -26,6 +30,9 @@ function bin2dec() {
 
 function oct2dec() {
   let oct = document.getElementById("octal").value;
+  if(oct==""){
+    alert("*Octal number required!");
+  }
   let dec = 0,
     rem = 0,
     dic = 0,
@@ -41,8 +48,10 @@ function oct2dec() {
 }
 
 function hex2dec() {
-  debugger;
   let hex = document.getElementById("hexadec").value;
+  if(hex==""){
+    alert("*Hexadecimal number required!");
+  }
   let dec = 0;
   let rem = 0;
   let dic = 0;
@@ -82,5 +91,3 @@ function hex2dec() {
 
   document.getElementById("decim").value = sum;
 }
-
-function Calculator() {}
