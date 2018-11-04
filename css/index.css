@@ -67,10 +67,6 @@ input{
 	font-size: 20px;
 }
 
-#keys{
-	width: 100%;
-}
-
 #keys li{
 	display: inline-block;
 	width:20%;
@@ -78,6 +74,11 @@ input{
 	margin: 3px;
 	padding: 5px 0px;
 	border: 1px solid lightgray;
+}
+
+#keys li:nth-child(1){
+	background: orangered;
+	color: white;
 }
 
 #keys li:active{

@@ -161,6 +161,10 @@ function Key_decimal() {
   document.getElementById("calcscreen").value += ".";
 }
 
+function Key_ac(){
+  document.getElementById("calcscreen").value = "";
+}
+
 function Calculator() {
   let operandStack = [""],
     operationStack = [],
