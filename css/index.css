@@ -91,6 +91,11 @@ input{
 	outline: none;
 }
 
+#bksp{
+	background: gray;
+	color: white;
+}
+
 @media (min-width: 320px) and (max-width: 720px){
 	*{
 		font: sans-serif;

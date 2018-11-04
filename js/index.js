@@ -161,8 +161,22 @@ function Key_decimal() {
   document.getElementById("calcscreen").value += ".";
 }
 
-function Key_ac(){
+function Key_ac() {
   document.getElementById("calcscreen").value = "";
+}
+
+function Key_bk() {
+  let input = document.getElementById("calcscreen").value,
+    temp = input;
+  if (input.length === 0) {
+    alert("Input empty!");
+  } else {
+    input = "";
+    for (let i = 0; i !== temp.length - 1; i++) {
+      input = input + temp[i];
+    }
+    document.getElementById("calcscreen").value = input;
+  }
 }
 
 function Calculator() {
