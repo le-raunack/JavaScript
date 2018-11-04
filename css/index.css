@@ -44,11 +44,50 @@ input{
 }
 
 #octal:focus{
-	border-bottom: 1.5px green solid;
+	border-bottom: 1.5px lightgreen solid;
 }
 
 #hexadec:focus{
 	border-bottom: 1.5px blue solid;
+}
+
+#calculator{
+	border: 1px gray solid;	
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+}
+
+#calcscreen{
+	width: 100%;
+	padding: 8px;
+	border: 1px lightgray solid;
+	border-radius: 10px;
+	text-align: right;
+	font-size: 20px;
+}
+
+#keys{
+	width: 100%;
+}
+
+#keys li{
+	display: inline-block;
+	width:20%;
+	text-align: center;
+	margin: 3px;
+	padding: 5px 0px;
+	border: 1px solid lightgray;
+}
+
+#keys li:active{
+	border: 1px solid black;
+}
+
+#keys li button {
+	border: none;
+	background: none;
+	outline: none;
 }
 
 @media (min-width: 320px) and (max-width: 720px){

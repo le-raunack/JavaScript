@@ -28,24 +28,28 @@
 		<button type="button" onclick="hex2dec()" class="butt">Convert</button>
 		<input type="number" id="decim" placeholder="Decimal" disabled>
 
-		<!--<h3>Calculator</h3>
-		<input type="text" id="caclscreen">
-		<ul id="keys" >
-			<li>0</li>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
-			<li>6</li>
-			<li>7</li>
-			<li>8</li>
-			<li>9</li>
-			<li>+</li>
-			<li>-</li>
-			<li>*</li>
-			<li>/</li>
-		</ul>-->
+		<h3>Calculator</h3>
+		<div id="calculator">	
+			<input type="text" id="calcscreen" value="" >
+			<ul id="keys" >
+				<li value="7" id="7" onclick="Key_7()" >7</li>
+				<li value="8" id="8" onclick="Key_8()" >8</li>
+				<li value="9" id="9" onclick="Key_9()" >9</li>
+				<li value="+" id="+" onclick="Key_plus()" >+</li>
+				<li value="4" id="4" onclick="Key_4()" >4</li>
+				<li value="5" id="5" onclick="Key_5()" >5</li>
+				<li value="6" id="6" onclick="Key_6()" >6</li>
+				<li value="-" id="-" onclick="Key_minus()" >-</li>
+				<li value="1" id="1" onclick="Key_1()" >1</li>
+				<li value="2" id="2" onclick="Key_2()" >2</li>
+				<li value="3" id="3" onclick="Key_3()" >3</li>
+				<li value="*" id="*" onclick="Key_mul()" >*</li>
+				<li value="0" id="0" onclick="Key_0()" >0</li>
+				<li value="." id="." onclick="Key_decimal()" >.</li>
+				<li><button onclick="Calculator()" >=</button></li>
+				<li value="/" id="/" onclick="Key_div()" >/</li>
+			</ul>
+		</div>
 		
 	</main>	
 	
