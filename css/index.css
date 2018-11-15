@@ -1,120 +1,116 @@
 *{
-	font-family: sans-serif;
-	box-sizing: border-box;
+    font-family: 'Segoe UI';
+    padding: 0px;
+    margin: 0px;
 }
 
-html{
-	padding: 0px;
-	margin: 0px;
+header{
+    background: lightblue;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 0px gray;
+    text-align: center;
 }
 
-body{
-	display: flex;
-	width: 40%;
-	margin: 10px auto;
-	padding:0px 10px 20px;
-	justify-content: center;
-	/*align-items: center;*/
-	box-shadow: 0px 2px 5px 0px gray;
+#container_main{
+    margin: 10px;
+    display: flex;
 }
 
-main{
-	display: inline-block;
+#conversions, #calculator{
+    box-shadow: 0px 1px 4px 0px gray;
+    padding: 20px;
+    margin: 10px;
+    border-left: 3px solid white;
 }
 
-.butt{
-	border-radius: 20px;
-	border-bottom: 1.5px solid gray;
-	outline: none;
+#conversions:focus-within{
+    border-left: 3px solid red;
 }
 
-.butt:active{
-	border-bottom: 1.5px solid #DCDCDC;
+#calculator:hover{
+    border-left: 3px solid blue;
+}
+
+.convert{
+    margin: 20px 0px;
 }
 
 input{
-	outline: none;
-	border: none;
-	background: white;
-	border-bottom: 1px gray solid;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: none;
+    margin: 10px 5px;
+    outline: none;
 }
 
-#binary:focus{
-	border-bottom: 1.5px red solid;
+#calcApp{
+    padding: 10px;
+    height: 300px;
 }
 
-#octal:focus{
-	border-bottom: 1.5px lightgreen solid;
-}
-
-#hexadec:focus{
-	border-bottom: 1.5px blue solid;
-}
-
-#calculator{
-	border: 1px gray solid;	
-	padding: 10px;
-	border-radius: 5px;
-	outline: none;
+#keys{
+    list-style: none;
+    text-align: center;
 }
 
 #calcscreen{
-	width: 100%;
-	padding: 8px;
-	border: 1px lightgray solid;
-	border-radius: 10px;
-	text-align: right;
-	font-size: 20px;
+    width: 90%;
+    padding: 5px 10px;
+    font-size: 30px;
+    background: none;
 }
 
 #keys li{
-	display: inline-block;
-	width:20%;
-	text-align: center;
-	margin: 3px;
-	padding: 5px 0px;
-	border: 1px solid lightgray;
-}
-
-#keys li:nth-child(1){
-	background: orangered;
-	color: white;
+    border: 1px solid gray;
+    width: 20%;
+    margin: 3px;
+    padding: 4px;
+    float: left;
 }
 
 #keys li:active{
-	border: 1px solid black;
-}
-
-#keys li button {
-	border: none;
-	background: none;
-	outline: none;
+    border: 1px solid lightgray;
 }
 
 #bksp{
-	background: gray;
-	color: white;
+    background: orangered;
+    color: white;
 }
 
-@media (min-width: 320px) and (max-width: 720px){
-	*{
-		font: sans-serif;
-	}
-	body{
-		display: flex;
-		width: 90%;
-		margin: 10px auto;
-		padding:0px 10px 10px;
-		justify-content: center;
-		align-items: center;
-		box-shadow: 0px 2px 5px 0px gray;
-	}
-	
-	main{
-		display: inline-block;
-	}
-	
-	input{
-		margin: 5px 0px;
-	}
+#AC{
+    background: red;
+    color: white;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background: lightgray;
+    text-align: center;
+}
+
+@media (min-width:320px) and (max-width:480px){
+    header{
+        width: 100%;
+    }
+
+    #container_main{
+        display: block;
+    }
+
+    #keys li{
+        width: 18%;
+        margin: 5px 2px;
+    }
+
+    #calcscreen{
+        font-size: 20px;
+    }
+
+    footer{
+        position: relative;
+    }
 }

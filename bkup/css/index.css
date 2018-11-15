@@ -1,0 +1,120 @@
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+html{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	display: flex;
+	width: 40%;
+	margin: 10px auto;
+	padding:0px 10px 20px;
+	justify-content: center;
+	/*align-items: center;*/
+	box-shadow: 0px 2px 5px 0px gray;
+}
+
+main{
+	display: inline-block;
+}
+
+.butt{
+	border-radius: 20px;
+	border-bottom: 1.5px solid gray;
+	outline: none;
+}
+
+.butt:active{
+	border-bottom: 1.5px solid #DCDCDC;
+}
+
+input{
+	outline: none;
+	border: none;
+	background: white;
+	border-bottom: 1px gray solid;
+}
+
+#binary:focus{
+	border-bottom: 1.5px red solid;
+}
+
+#octal:focus{
+	border-bottom: 1.5px lightgreen solid;
+}
+
+#hexadec:focus{
+	border-bottom: 1.5px blue solid;
+}
+
+#calculator{
+	border: 1px gray solid;	
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+}
+
+#calcscreen{
+	width: 100%;
+	padding: 8px;
+	border: 1px lightgray solid;
+	border-radius: 10px;
+	text-align: right;
+	font-size: 20px;
+}
+
+#keys li{
+	display: inline-block;
+	width:20%;
+	text-align: center;
+	margin: 3px;
+	padding: 5px 0px;
+	border: 1px solid lightgray;
+}
+
+#keys li:nth-child(1){
+	background: orangered;
+	color: white;
+}
+
+#keys li:active{
+	border: 1px solid black;
+}
+
+#keys li button {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+#bksp{
+	background: gray;
+	color: white;
+}
+
+@media (min-width: 320px) and (max-width: 720px){
+	*{
+		font: sans-serif;
+	}
+	body{
+		display: flex;
+		width: 90%;
+		margin: 10px auto;
+		padding:0px 10px 10px;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 2px 5px 0px gray;
+	}
+	
+	main{
+		display: inline-block;
+	}
+	
+	input{
+		margin: 5px 0px;
+	}
+}

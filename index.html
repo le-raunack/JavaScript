@@ -1,62 +1,69 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MathBox</title>
-<link href="css/index.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MathBox</title>
 </head>
-
 <body>
-	
-	<main>
-		<h1>MathBox</h1>
-		<p id="date"></p>
-		<h3>Conversions</h3>
-		<p>Binary to Decimal</p>
-		<input type="number" id="binary" placeholder="Binary*" >
-		<button type="button" onclick="bin2dec()" class="butt">Convert</button>
-		<input type="number" id="decimal" placeholder="Decimal" disabled>
-		
-		<p>Octal to Decimal</p>
-		<input type="number" id="octal" placeholder="Octal*" >
-		<button type="button" onclick="oct2dec()" class="butt">Convert</button>
-		<input type="number" id="decima" placeholder="Decimal" disabled>
-		
-		<p>Hexadecimal to Decimal</p>
-		<input id="hexadec" placeholder="Hexadecimal*" >
-		<button type="button" onclick="hex2dec()" class="butt">Convert</button>
-		<input type="number" id="decim" placeholder="Decimal" disabled>
-
-		<h3>Calculator</h3>
-		<div id="calculator">	
-			<input type="text" id="calcscreen" value="" disabled >
-			<ul id="keys" >
-				<li id="AC" onclick="Key_ac()">AC</li>
-				<li id="bksp" onclick="Key_bk()">Bksp</li> <br>
-				<li value="7" id="7" onclick="Key_7()" >7</li>
-				<li value="8" id="8" onclick="Key_8()" >8</li>
-				<li value="9" id="9" onclick="Key_9()" >9</li>
-				<li value="+" id="+" onclick="Key_plus()" >+</li>
-				<li value="4" id="4" onclick="Key_4()" >4</li>
-				<li value="5" id="5" onclick="Key_5()" >5</li>
-				<li value="6" id="6" onclick="Key_6()" >6</li>
-				<li value="-" id="-" onclick="Key_minus()" >-</li>
-				<li value="1" id="1" onclick="Key_1()" >1</li>
-				<li value="2" id="2" onclick="Key_2()" >2</li>
-				<li value="3" id="3" onclick="Key_3()" >3</li>
-				<li value="*" id="*" onclick="Key_mul()" >*</li>
-				<li value="0" id="0" onclick="Key_0()" >0</li>
-				<li value="." id="." onclick="Key_decimal()" >.</li>
-				<li><button onclick="Calculator()" >=</button></li>
-				<li value="/" id="/" onclick="Key_div()" >/</li>
-
-			</ul>
-		</div>
-		
-	</main>	
-	
-	<script src="js/index.js"></script>
+    <header>
+        <h1>MathBox</h1>
+    </header>
+    <div id="container_main">
+        <div id="conversions">
+            <h3>Conversions</h3>
+            <div class="convert">
+                <p>Binary to Decimal</p>
+                <input type="number" id="binary" placeholder="Binary*" >
+                <button type="button" onclick="bin2dec()" class="butt">Convert</button>
+                <input type="number" id="decimal" placeholder="Decimal" disabled>
+            </div>
+            <div class="convert">
+                <p>Octal to Decimal</p>
+                <input type="number" id="octal" placeholder="Octal*" >
+                <button type="button" onclick="oct2dec()" class="butt">Convert</button>
+                <input type="number" id="decima" placeholder="Decimal" disabled>
+            </div>
+            <div class="convert">
+                <p>Hexadecimal to Decimal</p>
+                <input id="hexadec" placeholder="Hexadecimal*" >
+                <button type="button" onclick="hex2dec()" class="butt">Convert</button>
+                <input type="number" id="decim" placeholder="Decimal" disabled>
+            </div>
+            <h5>*Required</h5>
+        </div>
+        <div id="calculator">
+            <h3>Calculator</h3>
+            <div id="calcApp">
+                <input type="text" id="calcscreen" value="" disabled >
+                <ul id="keys">
+                    <li id="AC" onclick="Key_ac()">AC</li>
+                    <li id="bksp" onclick="Key_bk()">Bksp</li> <br><br>
+                    <li value="7" id="7" onclick="Key_7()" >7</li>
+                    <li value="8" id="8" onclick="Key_8()" >8</li>
+                    <li value="9" id="9" onclick="Key_9()" >9</li>
+                    <li value="+" id="+" onclick="Key_plus()" >+</li>
+                    <li value="4" id="4" onclick="Key_4()" >4</li>
+                    <li value="5" id="5" onclick="Key_5()" >5</li>
+                    <li value="6" id="6" onclick="Key_6()" >6</li>
+                    <li value="-" id="-" onclick="Key_minus()" >-</li>
+                    <li value="1" id="1" onclick="Key_1()" >1</li>
+                    <li value="2" id="2" onclick="Key_2()" >2</li>
+                    <li value="3" id="3" onclick="Key_3()" >3</li>
+                    <li value="*" id="*" onclick="Key_mul()" >*</li>
+                    <li value="0" id="0" onclick="Key_0()" >0</li>
+                    <li value="." id="." onclick="Key_decimal()" >.</li>
+                    <li onclick="Calculator()" >=</li>
+                    <li value="/" id="/" onclick="Key_div()" >/</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>@Techdoodle</p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

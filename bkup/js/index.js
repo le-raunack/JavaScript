@@ -1,4 +1,13 @@
 "use strict";
+let time = new Date();
+document.getElementById("date").innerHTML =
+  "<strong>Date</strong>: " +
+  time.getDate() +
+  "/" +
+  (time.getMonth() + 1) +
+  "/" +
+  time.getFullYear();
+
 function bin2dec() {
   let bin = document.getElementById("binary").value;
   if (bin == "") {
@@ -69,24 +78,6 @@ function hex2dec() {
       case "F":
         temp = 15;
         break;
-      case "a":
-        temp = 10;
-        break;
-      case "b":
-        temp = 11;
-        break;
-      case "c":
-        temp = 12;
-        break;
-      case "d":
-        temp = 13;
-        break;
-      case "e":
-        temp = 14;
-        break;
-      case "f":
-        temp = 15;
-        break;
       default:
         temp = parseInt(hex.charAt(i));
         break;
@@ -98,12 +89,6 @@ function hex2dec() {
   }
 
   document.getElementById("decim").value = sum;
-}
-
-/***************Calculator Program************/
-function Key_0() {
-  let key = document.getElementById("0").value;
-  document.getElementById("calcscreen").value += key;
 }
 
 function Key_1() {
@@ -202,7 +187,7 @@ function Calculator() {
   if (input.indexOf("=") === -1) {
     input += "=";
   }
-  let i = input.length; console.log(i);
+  let i = input.length;
   for (i = 0; i < input.length; i++) {
     let newNo = input.charAt(i);
     if (OperationClass.indexOf(newNo) === -1) {
@@ -236,7 +221,7 @@ function Calculator() {
             break;
         }
         if (newNo === "=") {
-          if (operandStack[operandStack.length - 1] === NaN) {
+          if (operandStack[operandStack.length - 1] == NaN) {
             alert("Improper insertion, please verify");
           }
           document.getElementById("calcscreen").value =
