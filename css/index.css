@@ -64,12 +64,17 @@ input{
     border: 1px solid gray;
     width: 20%;
     margin: 3px;
-    padding: 4px;
+    padding: 4px 0px;
     float: left;
 }
 
 #keys li:active{
     border: 1px solid lightgray;
+}
+
+#plus, #minus, #div, #multi, #modulus, #sqrt{
+    background: blueviolet;
+    color: white;
 }
 
 #bksp{

@@ -102,58 +102,43 @@ function hex2dec() {
 
 /***************Calculator Program************/
 function Key_0() {
-  let key = document.getElementById("0").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "0";
 }
 
 function Key_1() {
-  let key = document.getElementById("1").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "1";
 }
 
 function Key_2() {
-  let key = document.getElementById("2").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "2";
 }
 
 function Key_3() {
-  let key = document.getElementById("3").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "3";
 }
 
 function Key_4() {
-  let key = document.getElementById("4").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "4";
 }
 
 function Key_5() {
-  let key = document.getElementById("5").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "5";
 }
 
 function Key_6() {
-  let key = document.getElementById("6").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "6";
 }
 
 function Key_7() {
-  let key = document.getElementById("7").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "7";
 }
 
 function Key_8() {
-  let key = document.getElementById("8").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "8";
 }
 
 function Key_9() {
-  let key = document.getElementById("9").value;
-  document.getElementById("calcscreen").value += key;
-}
-
-function Key_9() {
-  let key = document.getElementById("9").value;
-  document.getElementById("calcscreen").value += key;
+  document.getElementById("calcscreen").value += "9";
 }
 
 function Key_plus() {
@@ -194,15 +179,25 @@ function Key_bk() {
   }
 }
 
+function Key_modulus() {
+  document.getElementById("calcscreen").value += "%";
+}
+
+function Key_sqrt() {
+  let input = document.getElementById("calcscreen").value;
+  document.getElementById("calcscreen").value = Math.sqrt(input);
+}
+
 function Calculator() {
   let operandStack = [""],
     operationStack = [],
-    OperationClass = ["+", "-", "*", "/", "="];
+    OperationClass = ["+", "-", "*", "/", "%", "="];
   let input = document.getElementById("calcscreen").value;
   if (input.indexOf("=") === -1) {
     input += "=";
   }
-  let i = input.length; console.log(i);
+  let i = input.length;
+  console.log(i);
   for (i = 0; i < input.length; i++) {
     let newNo = input.charAt(i);
     if (OperationClass.indexOf(newNo) === -1) {
@@ -232,6 +227,10 @@ function Calculator() {
             break;
           case "/":
             result = no2 / no1;
+            operandStack.push(result);
+            break;
+          case "%":
+            result = no2 % no1;
             operandStack.push(result);
             break;
         }
