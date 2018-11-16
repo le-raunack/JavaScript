@@ -4,6 +4,11 @@
     margin: 0px;
 }
 
+a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
 body{
     background: lightgray;
 }
@@ -66,15 +71,11 @@ input{
 }
 
 #keys li{
-    border: 1px solid gray;
+    border: 1px solid black;
     width: 20%;
     margin: 3px;
     padding: 4px 0px;
     float: left;
-}
-
-#keys li:active{
-    border: 1px solid lightgray;
 }
 
 .operations{
@@ -83,13 +84,17 @@ input{
 }
 
 #bksp{
-    background: orangered;
+    background:  orangered;
     color: white;
 }
 
 #AC{
-    background: red;
+    background: linear-gradient(180deg, red, darkred);
     color: white;
+}
+
+#AC:active{
+    background: linear-gradient(0deg, red, darkred);
 }
 
 footer{

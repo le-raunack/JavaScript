@@ -100,7 +100,12 @@ function hex2dec() {
   document.getElementById("decim").value = sum;
 }
 
+
+/*********************************************/
 /***************Calculator Program************/
+/*********************************************/
+
+
 function Key_0() {
   document.getElementById("calcscreen").value += "0";
 }
@@ -161,6 +166,10 @@ function Key_decimal() {
   document.getElementById("calcscreen").value += ".";
 }
 
+function Key_modulus() {
+  document.getElementById("calcscreen").value += "%";
+}
+
 function Key_ac() {
   document.getElementById("calcscreen").value = "";
 }
@@ -179,10 +188,6 @@ function Key_bk() {
   }
 }
 
-function Key_modulus() {
-  document.getElementById("calcscreen").value += "%";
-}
-
 function Key_sqrt() {
   let input = document.getElementById("calcscreen").value;
   document.getElementById("calcscreen").value = Math.sqrt(input);
@@ -197,7 +202,6 @@ function Calculator() {
     input += "=";
   }
   let i = input.length;
-  console.log(i);
   for (i = 0; i < input.length; i++) {
     let newNo = input.charAt(i);
     if (OperationClass.indexOf(newNo) === -1) {
@@ -235,9 +239,6 @@ function Calculator() {
             break;
         }
         if (newNo === "=") {
-          if (operandStack[operandStack.length - 1] === NaN) {
-            alert("Improper insertion, please verify");
-          }
           document.getElementById("calcscreen").value =
             operandStack[operandStack.length - 1];
         } else {
