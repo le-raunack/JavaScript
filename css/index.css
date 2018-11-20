@@ -21,11 +21,12 @@ header{
 }
 
 #container_main{
+    width: 95%;
     margin: 10px auto;
     display: flex;
 }
 
-#conversions, #calculator{
+#conversions, #calculator, #stuff{
     box-shadow: 0px 1px 4px 0px gray;
     padding: 20px;
     margin: 10px;
@@ -39,6 +40,10 @@ header{
 
 #calculator:hover{
     border-left: 3px solid blue;
+}
+
+#stuff:hover{
+    border-left: 3px solid green;
 }
 
 .convert{
@@ -76,6 +81,10 @@ input{
     margin: 3px;
     padding: 4px 0px;
     float: left;
+}
+
+#keys li:active{
+    border: 1px solid gray;
 }
 
 .operations{
