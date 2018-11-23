@@ -13,57 +13,65 @@
         <h1>MathBox</h1>
     </header>
     <div id="container_main">
-        <div id="conversions">
+        <div class="container">
             <h3>Conversions</h3>
             <div class="convert">
                 <p>Binary to Decimal</p>
                 <input type="number" id="binary" placeholder="Binary*" >
-                <button type="button" onclick="bin2dec()" class="butt">Convert</button>
-                <input type="number" id="decimal" placeholder="Decimal" disabled>
+                <button type="button" onclick="bin2dec()" >Convert</button>
+                <input type="number" class="output  " placeholder="Decimal" disabled>
             </div>
             <div class="convert">
                 <p>Octal to Decimal</p>
                 <input type="number" id="octal" placeholder="Octal*" >
-                <button type="button" onclick="oct2dec()" class="butt">Convert</button>
-                <input type="number" id="decima" placeholder="Decimal" disabled>
+                <button type="button" onclick="oct2dec()" >Convert</button>
+                <input type="number" class="output" placeholder="Decimal" disabled>
             </div>
             <div class="convert">
                 <p>Hexadecimal to Decimal</p>
                 <input id="hexadec" placeholder="Hexadecimal*" >
-                <button type="button" onclick="hex2dec()" class="butt">Convert</button>
-                <input type="number" id="decim" placeholder="Decimal" disabled>
+                <button type="button" onclick="hex2dec()" >Convert</button>
+                <input type="number" class="output" placeholder="Decimal" disabled>
             </div>
             <h5>*Required</h5>
         </div>
-        <div id="calculator">
+        <div class="container">
             <h3>Calculator</h3>
-            <div id="calcApp">
-                <input type="text" id="calcscreen" value="" >
-                <ul id="keys">
-                    <li id="AC" onclick="Key_ac()">AC</li>
-                    <li id="bksp" onclick="Key_bk()">Bksp</li>
-                    <li class="operations" onclick="Key_modulus()">%</li>
-                    <li class="operations" onclick="Key_sqrt()">sqrt</li>
-                    <li onclick="Key_7()" >7</li>
-                    <li onclick="Key_8()" >8</li>
-                    <li onclick="Key_9()" >9</li>
-                    <li class="operations" onclick="Key_plus()" >+</li>
-                    <li onclick="Key_4()" >4</li>
-                    <li onclick="Key_5()" >5</li>
-                    <li onclick="Key_6()" >6</li>
-                    <li class="operations" onclick="Key_minus()" >-</li>
-                    <li onclick="Key_1()" >1</li>
-                    <li onclick="Key_2()" >2</li>
-                    <li onclick="Key_3()" >3</li>
-                    <li class="operations" onclick="Key_mul()" >*</li>
-                    <li onclick="Key_0()" >0</li>
-                    <li onclick="Key_decimal()" >.</li>
-                    <li class="operations" onclick="Calculator()" >=</li>
-                    <li class="operations" onclick="Key_div()" >/</li>
-                </ul>
-            </div>
+            <table id="cacl">
+                <input type="text" id="calcscreen">
+                <tr>
+                    <td onclick="Key_ac()" id="AC"><button>AC</button></td>
+                    <td onclick="Key_bk()" id="bksp"><button>Bksp</button></td>
+                    <td onclick="Key_modulus()" class="operations"><button>%</button></td>
+                    <td onclick="Key_sqrt()" class="operations"><button>sqrt</button></td>
+                </tr>
+                <tr>
+                    <td onclick="Key_7()" class="operand"><button>7</button></td>
+                    <td onclick="Key_8()" class="operand"><button>8</button></td>
+                    <td onclick="Key_9()" class="operand"><button>9</button></td>
+                    <td onclick="Key_plus()" class="operations"><button>+</button></td>
+                </tr>
+                <tr>
+                    <td onclick="Key_4()" class="operand"><button>4</button></td>
+                    <td onclick="Key_5()" class="operand"><button>5</button></td>
+                    <td onclick="Key_6()" class="operand"><button>6</button></td>
+                    <td onclick="Key_minus()" class="operations"><button>-</button></td>
+                </tr>
+                <tr>
+                    <td onclick="Key_1()" class="operand"><button>1</button></td>
+                    <td onclick="Key_2()" class="operand"><button>2</button></td>
+                    <td onclick="Key_3()" class="operand"><button>3</button></td>
+                    <td onclick="Key_mul()" class="operations"><button>*</button></td>
+                </tr>
+                <tr>
+                    <td onclick="Key_0()" class="operand"><button>0</button></td>
+                    <td onclick="Key_decimal()" class="operand"><button>.</button></td>
+                    <td onclick="Calculator()" class="operations"><button>=</button></td>
+                    <td onclick="Key_div()" class="operations"><button>/</button></td>
+                </tr>
+            </table>
         </div>
-        <!--<div id="stuff">
+        <!--<div class="container">
             
         </div>-->
     </div>

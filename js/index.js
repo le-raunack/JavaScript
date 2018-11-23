@@ -1,4 +1,7 @@
 "use strict";
+
+let output = document.getElementsByClassName("output");
+
 function bin2dec() {
   let bin = document.getElementById("binary").value;
   if (bin == "") {
@@ -15,7 +18,7 @@ function bin2dec() {
     count++;
     bin = Math.floor(bin / 10);
   }
-  document.getElementById("decimal").value = dec;
+  output[0].value = dec;
 }
 
 function oct2dec() {
@@ -34,7 +37,7 @@ function oct2dec() {
     count++;
     oct = Math.floor(oct / 10);
   }
-  document.getElementById("decima").value = dec;
+  output[1].value = dec;
 }
 
 function hex2dec() {
@@ -97,7 +100,7 @@ function hex2dec() {
     i--;
   }
 
-  document.getElementById("decim").value = sum;
+  output[2].value = sum;
 }
 
 /*********************************************/
@@ -182,6 +185,10 @@ function Key_bk() {
 function Key_sqrt() {
   let input = document.getElementById("calcscreen").value;
   document.getElementById("calcscreen").value = Math.sqrt(input);
+  if (document.getElementById("calcscreen").value === "NaN") {
+    alert("Improper insertion!");
+    document.getElementById("calcscreen").value = 0;
+  }
 }
 
 function Calculator() {
@@ -232,6 +239,10 @@ function Calculator() {
         if (newNo === "=") {
           document.getElementById("calcscreen").value =
             operandStack[operandStack.length - 1];
+          if (document.getElementById("calcscreen").value === "NaN") {
+            alert("Improper insertion!");
+            document.getElementById("calcscreen").value = 0;
+          }
         } else {
           operationStack.push(newNo);
         }

@@ -21,29 +21,21 @@ header{
 }
 
 #container_main{
-    width: 95%;
+    width: 65%;
     margin: 10px auto;
     display: flex;
 }
 
-#conversions, #calculator, #stuff{
+.container{
     box-shadow: 0px 1px 4px 0px gray;
     padding: 20px;
-    margin: 10px;
+    margin: 10px auto;
     background: white;
     border-left: 3px solid white;
 }
 
-#conversions:focus-within{
-    border-left: 3px solid red;
-}
-
-#calculator:hover{
+.container:focus-within{
     border-left: 3px solid blue;
-}
-
-#stuff:hover{
-    border-left: 3px solid green;
 }
 
 .convert{
@@ -58,14 +50,40 @@ input{
     outline: none;
 }
 
-#calcApp{
-    padding: 10px;
-    height: 300px;
+#cacl{
+    text-align: center;
+    width: 100%;
 }
 
-#keys{
-    list-style: none;
-    text-align: center;
+#cacl tr td{
+    width: 25%;
+}
+
+#cacl tr td button{
+    padding: 8px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+}
+
+.operations{
+    background: linear-gradient(180deg, rgb(198, 111, 224), blueviolet);
+    color: white;
+}
+
+.operations:active{
+    background: linear-gradient(0deg, rgb(198, 111, 224), blueviolet);
+    color: white;
+}
+
+.operand{
+    background: linear-gradient(180deg, gray, rgb(90, 89, 89));
+}
+
+.operand:active{
+    background: linear-gradient(0deg, gray, rgb(90, 89, 89));
 }
 
 #calcscreen{
@@ -73,33 +91,19 @@ input{
     padding: 5px 10px;
     font-size: 30px;
     background: none;
-}
-
-#keys li{
-    border: 1px solid black;
-    width: 20%;
-    margin: 3px;
-    padding: 4px 0px;
-    float: left;
-}
-
-#keys li:active{
-    border: 1px solid gray;
-}
-
-.operations{
-    background: blueviolet;
-    color: white;
+    text-align: right;
 }
 
 #bksp{
-    background:  orangered;
-    color: white;
+    background: linear-gradient(180deg, orange, orangered);
+}
+
+#bksp:active{
+    background: linear-gradient(0deg, orange, orangered);
 }
 
 #AC{
     background: linear-gradient(180deg, red, darkred);
-    color: white;
 }
 
 #AC:active{
@@ -126,15 +130,7 @@ footer{
         width: 90%;
         margin: 0px auto;
     }
-
-    #keys li{
-        border: 1px solid gray;
-        padding: 4px;
-        float: left;
-        width: 18%;
-        margin: 5px 2px;
-    }
-
+    
     #calcscreen{
         font-size: 20px;
     }
